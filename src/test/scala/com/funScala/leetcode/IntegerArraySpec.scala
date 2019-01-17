@@ -1,6 +1,6 @@
 package com.funScala.leetcode
 
-import org.scalatest._
+import org.scalatest.{FunSpec, Matchers}
 
 class IntegerArraySpec extends FunSpec with Matchers {
   val ia  = new IntegerArrays
@@ -11,6 +11,9 @@ class IntegerArraySpec extends FunSpec with Matchers {
 
     it("should return [0,4] given [(1,2,3,4,9), 10]") {
       ia.twoSum(Array(1,3,2,4,9), 10 ) shouldBe Array(0,4)
+    }
+    it("given empty array and 8 should return []") {
+      ia.twoSum(Array(), 8 ) shouldBe Array()
     }
   }
 }
